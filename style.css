@@ -1,0 +1,101 @@
+/*Style for the upload fieldset*/
+.full-upload-container{
+    width : 50%;
+}
+/*Style for each of the file's Tbody element*/
+.each-file{
+    width : 100%;
+    margin : 4px;
+}
+/*Style for every table row*/
+.tr{
+    width : 100%;
+}
+/*Style for File Size*/
+.file-size{
+    text-align : center;
+}
+/*Style for the upload status container*/
+.font-container{
+    text-align : center;
+}
+/*Style for filename, filesize and upload status container*/
+.file-name, .file-size, .font-container{
+    padding :10px;
+}  
+/*Media query to handle responsiveness*/
+@media screen and (max-width : 500px){
+    .full-upload-container{
+        width : 90%;
+    }
+}
+/*Style for rolling animation while file upload is pending*/
+.loading{
+    height: 1rem;
+    width: 1rem;
+    border-radius:50%;
+    border: solid gold;
+    border-right:4px solid transparent;
+    animation-name:rotate;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    margin-left : 30%;
+}
+/*Keyfranes for the animation*/
+@keyframes rotate{
+    0%{
+        transform:rotate(0);
+        
+    }
+    50%{
+        transform:rotate(180deg);
+    
+    }
+    100%{
+        transform:rotate(360deg);
+    
+    }
+}
+/*Styles for the Div responsible for recieving the drag and drop files*/
+.select-container{
+    width : 100%;
+    text-align : center;
+    border : dotted 1px blue;
+    margin-top : 10px;
+    padding: 50px 0;
+    cursor : pointer;
+    border-radius : 5%;
+}
+/*Div containing the upload inidicator*/
+.select-file{
+    background-color : red;
+    margin : 0% 90px;
+    text-transform : uppercase;
+    background-color : blue;
+    color : white;
+    padding : 4px;
+    font-weight : bolder;
+}
+/*Style for Delete button*/
+.delete-refresh-btn{
+    background-color : transparent;
+    border : black solid 1px;
+    cursor : pointer;
+}
+/*Hover effect for delete button*/
+.delete-refresh-btn:hover{
+    background-color : white;
+    border : black solid 1px;
+}
+/*Style for the container responsible for displaying upload errors*/
+.error-display{
+    color : red;
+    font-weight : bolder;
+    margin : 0%;
+    padding : 0%;
+    margin-left : 10px;
+}
+/*Styles for the list of selected files*/
+.list-of-selected{
+    margin-top : 10px;
+}

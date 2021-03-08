@@ -1,0 +1,40 @@
+<!--
+    This file contains the scafold of the file uploading system.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Multiple File Upload</title>
+</head>
+<body>
+    <!--Fieldset to contain the whole uploading mechanism-->
+    <fieldset class="full-upload-container">
+        <legend>Upload Files</legend>
+        <!--Form for submitting form-->
+        <form class="file-upload-form" id="file-upload-form" style="display : none;">
+            <input type="file" id="file" multiple>
+        </form>
+        <!--Div to recieve drag and drop event-->
+        <div class="select-container" id="fake_selector">
+            <div class="select-main-btn">
+            <p class="select-file">Select Files</p>
+            <small class="instruction">Drag and drop files here or click to select files.</small> 
+            </div>
+        </div>
+        <!--List to contain the selected files-->
+        <table id="list-of-selected" class="list-of-selected">
+        
+        </table>
+    </fieldset>
+    <!--Loading needed icons into the DOM-->
+    <p id="check_icon" style="display : none;"><img src="icons/check.svg"></p>
+    <p id="delete_icon" style="display : none;"><img src="icons/delete.svg"></p>
+    <p id="refresh_icon" style="display : none;"><img src="icons/refresh.svg"></p>
+    <!--Include js file to handle file upload-->
+    <script type="text/javascript" src="uploader.js"></script>
+</body>
+</html>
